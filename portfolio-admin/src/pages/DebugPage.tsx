@@ -14,7 +14,7 @@ export function DebugPage() {
     try {
       // 测试 1: 检查 Supabase 客户端
       setOutput(prev => prev + '✓ Supabase 客户端已创建\n')
-      setOutput(prev => prev + `  URL: ${supabase.supabaseUrl}\n\n`)
+      setOutput(prev => prev + `  URL: https://jcxlgmmudtbizyinqyrq.supabase.co\n\n`)
 
       // 测试 2: 调用 Edge Function
       setOutput(prev => prev + '正在调用 projects-api...\n')
