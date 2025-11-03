@@ -1,0 +1,444 @@
+[
+  {
+    "query": "A mobile ecommerce app interface design for portfolio",
+    "image_info": {
+      "url": "https://fireartstudio.s3-accelerate.amazonaws.com/wp-content/uploads/2018/09/image11-850x638-1.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 35976,
+      "width": 850,
+      "height": 638,
+      "total_pixels": 542300,
+      "basic_score": 0.8612070728622467,
+      "file_name": "mobile-ecommerce-app-ui-design-portfolio.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 95.0,
+      "watermark_score": 100.0,
+      "overall_score": 98.0,
+      "explanation": "The image is a perfect match for the search query and prompt, showcasing a professional and well-designed mobile e-commerce app UI. The clarity is excellent, the presentation is clean and suitable for a portfolio, and there are no watermarks. The overall quality is extremely high.",
+      "file_name": "mobile-ecommerce-app-ui-design-portfolio.jpg",
+      "caption": "A professional portfolio mockup displaying three screens of a mobile e-commerce fashion app called 'Loktra'. The screens, presented on white smartphone mockups against a plain background, showcase a clean UI with a pink and white color scheme. From left to right, they display the home screen with categories and banners, a product listing page for women's tops, and a search results or wishlist page with various fashion and beauty items.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "A mobile ecommerce app interface design for portfolio",
+    "image_info": {
+      "url": "https://s3-alpha.figma.com/hub/file/5848375289/e90a1dbb-5077-4b9a-afcb-1ac86cdb8cb8-cover.png",
+      "img_format": "PNG",
+      "mode": "RGBA",
+      "file_size": 1254874,
+      "width": 1440,
+      "height": 1024,
+      "total_pixels": 1474560,
+      "basic_score": 0.8893225615516309,
+      "file_name": "ecommerce-mobile-app-ui-kit-design.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 100.0,
+      "watermark_score": 75.0,
+      "overall_score": 95.0,
+      "explanation": "The image is a perfect match for the query, showcasing a high-quality, modern e-commerce mobile app UI design. The clarity and composition are excellent. The score is slightly reduced for the prominent promotional text and Figma logo, which are part of the presentation but function as branding.",
+      "file_name": "ecommerce-mobile-app-ui-kit-design.jpg",
+      "caption": "A promotional image showcasing a modern e-commerce mobile app UI kit. The image features several smartphone screens displaying different parts of the app, including a home page with product categories and hot deals, a product listing page, a product details page, and the shopping cart. To the left, text reads 'E-Commerce Mobile App UI Kit', 'Screens 60+', and 'Tools Used' above the Figma logo.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "A mobile ecommerce app interface design for portfolio",
+    "image_info": {
+      "url": "https://s3-alpha.figma.com/hub/file/5323843465/9d792385-0b34-4cfe-baa2-5690034f1e49-cover.png",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 493775,
+      "width": 1600,
+      "height": 1200,
+      "total_pixels": 1920000,
+      "basic_score": 0.7874629928823486,
+      "file_name": "mobile-ecommerce-app-ui-design-portfolio.jpg_0c"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 100.0,
+      "watermark_score": 100.0,
+      "overall_score": 98.0,
+      "explanation": "The image is a perfect match for the query, showcasing a professional and modern e-commerce mobile app UI design. It is a high-resolution digital graphic with excellent clarity and no watermarks. The overall composition and aesthetic quality are outstanding, making it an ideal piece for a design portfolio.",
+      "file_name": "mobile-ecommerce-app-ui-design-portfolio.jpg",
+      "caption": "A graphic design presentation of a mobile e-commerce application interface. The image features a smartphone mockup displaying the app's home screen on a light peach-colored background with abstract shapes. The app's UI has a clean, white layout with sections for 'Categories,' a 'Big Sale' banner, 'Featured' products, and 'Stories.' To the left of the phone, bold text reads 'EXPLORE' with taglines like 'E-Commerce' and 'Efficient, Seamless, Personalized.' Illustrated shopping bags are visible in the bottom right corner.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "A mobile ecommerce app interface design for portfolio",
+    "image_info": {
+      "url": "https://d3pxwdeb4y32a1.cloudfront.net/wp-content/uploads/2023/10/best_ecommerce_mobile_app_design_tips_to_boost_revenue_inner-a618edd4a5927604448cdc70d4c16172.webp",
+      "img_format": "WEBP",
+      "mode": "RGB",
+      "file_size": 128826,
+      "width": 1000,
+      "height": 600,
+      "total_pixels": 600000,
+      "basic_score": 0.8918400848737129,
+      "file_name": "mobile-ecommerce-app-ui-design-sneaker-store.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 95.0,
+      "watermark_score": 40.0,
+      "overall_score": 85.0,
+      "explanation": "The image is perfectly relevant to the search query, showcasing a high-quality UI design for a mobile e-commerce app, which is ideal for a portfolio. The clarity is excellent, with sharp text and graphics. However, a prominent company logo in the top-left corner acts as a significant watermark, reducing its suitability for generic use. The overall composition and design quality are very professional.",
+      "file_name": "mobile-ecommerce-app-ui-design-sneaker-store.jpg",
+      "caption": "A professional UI/UX design showcase for a mobile e-commerce application, displayed on three overlapping smartphone mockups. The app is for a sneaker store and shows the user flow from the main collections page, to a detailed product page for a 'Jordan 1 Retro High' sneaker, and finally to the checkout/payment screen. The design is clean and modern, using a white background with teal and purple accents.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "A shopping cart user experience design mockup",
+    "image_info": {
+      "url": "https://s3.amazonaws.com/media.nngroup.com/media/editor/2014/06/06/hautelook_checkoutprocess.png",
+      "img_format": "PNG",
+      "mode": "RGBA",
+      "file_size": 108695,
+      "width": 720,
+      "height": 548,
+      "total_pixels": 394560,
+      "basic_score": 0.8173941185823449,
+      "file_name": "ecommerce_checkout_page_ux_design_example.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 90.0,
+      "clarity_score": 55.0,
+      "watermark_score": 100.0,
+      "overall_score": 65.0,
+      "explanation": "The image is highly relevant as it shows a real-world example of an e-commerce checkout page, which is a key component of shopping cart UX design. However, the image quality is poor, with noticeable pixelation and low resolution, which detracts from its overall professional quality. The design itself appears somewhat dated (from 2014, based on the delivery dates).",
+      "file_name": "ecommerce_checkout_page_ux_design_example.jpg",
+      "caption": "A screenshot of the checkout page from the e-commerce website HauteLook, illustrating a user experience (UX) design for online shopping. The page is divided into three sections: 1. Shipping, 2. Payment Method, and 3. Cart. The cart summary on the right shows several items, including a baby girl's set, bootcut jeans, and sandals, along with their prices and estimated delivery dates.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "A shopping cart user experience design mockup",
+    "image_info": {
+      "url": "https://s3.amazonaws.com/media.nngroup.com/media/editor/2014/06/06/adidas_removequantity.png",
+      "img_format": "PNG",
+      "mode": "RGBA",
+      "file_size": 116692,
+      "width": 720,
+      "height": 641,
+      "total_pixels": 461520,
+      "basic_score": 0.8344292178158453,
+      "file_name": "adidas_shopping_cart_ux_design_example.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 65.0,
+      "watermark_score": 100.0,
+      "overall_score": 85.0,
+      "explanation": "The image is a perfect real-world example of a shopping cart page, directly matching the search query for 'shopping cart ux design'. It showcases item details, order summary, quantity adjustments, and checkout options. While the image resolution is not perfect and shows some pixelation, it is clear enough to analyze all the user interface and experience elements. The Adidas logo is part of the site design, not a distracting watermark.",
+      "file_name": "adidas_shopping_cart_ux_design_example.jpg",
+      "caption": "A screenshot of the Adidas e-commerce website's shopping cart page. It displays two items: an 'Argentina Training Top' and an 'Argentina Track Jacket', showing their respective details, quantity, and price. The page includes an 'Order Summary' box, promo code options, and prominent 'checkout' buttons, serving as a practical example of shopping cart UX/UI design.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "A shopping cart user experience design mockup",
+    "image_info": {
+      "url": "https://assets.justinmind.com/wp-content/uploads/2019/10/shopping-cart-ui-best-practices.png",
+      "img_format": "PNG",
+      "mode": "P",
+      "file_size": 24078,
+      "width": 1500,
+      "height": 1000,
+      "total_pixels": 1500000,
+      "basic_score": 0.8601320263625332,
+      "file_name": "shopping-cart-ux-design-principles-mockup.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 85.0,
+      "watermark_score": 100.0,
+      "overall_score": 95.0,
+      "explanation": "The image is perfectly relevant to the search query, as it's not just a mockup of a shopping cart but an infographic explaining the key UX design principles behind it. The clarity is good, but it is not a high-resolution image, showing some slight pixelation. It has no watermarks, and the overall composition is excellent, clean, and highly professional for its purpose.",
+      "file_name": "shopping-cart-ux-design-principles-mockup.jpg",
+      "caption": "An infographic showcasing user experience (UX) design principles for an e-commerce shopping cart. The mockup features a clean, minimalist cart interface with annotations pointing to key concepts: 'Mobile Optimization,' 'Easy to Find,' 'Minimum Friction,' and 'Transparency.' The cart displays items, quantities, prices, a subtotal, shipping cost, and a clear total with a 'Check out' button.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "A shopping cart user experience design mockup",
+    "image_info": {
+      "url": "https://assets.justinmind.com/wp-content/uploads/2019/10/furniture-web-shop-shopping-cart-example.png",
+      "img_format": "PNG",
+      "mode": "P",
+      "file_size": 47242,
+      "width": 1500,
+      "height": 1150,
+      "total_pixels": 1725000,
+      "basic_score": 0.8018976882278567,
+      "file_name": "clean-shopping-cart-ux-design-mockup.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 98.0,
+      "clarity_score": 85.0,
+      "watermark_score": 100.0,
+      "overall_score": 92.0,
+      "explanation": "The image is an excellent and highly relevant example of a modern shopping cart UX design. It features a clean, minimalist layout that is easy to understand. The clarity is good for a screenshot, though not perfectly crisp. There are no watermarks, making it a high-quality asset for design inspiration.",
+      "file_name": "clean-shopping-cart-ux-design-mockup.jpg",
+      "caption": "A screenshot of a minimalist and modern e-commerce shopping cart page. The design features a clean white background, clear typography, and a well-organized layout. Two items are in the cart: a 'Bookshelf' and a 'Round table', with options to change quantity and color. The total cost of $275.52 is prominently displayed at the top, with a detailed breakdown of subtotal, shipping, and VAT at the bottom. Clear 'Check out' call-to-action buttons are visible.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "A shopping cart user experience design mockup",
+    "image_info": {
+      "url": "https://assets.justinmind.com/wp-content/uploads/2019/10/fitness-clothing-app-shopping-cart-example.png",
+      "img_format": "PNG",
+      "mode": "P",
+      "file_size": 117872,
+      "width": 1500,
+      "height": 1000,
+      "total_pixels": 1500000,
+      "basic_score": 0.8690547025400313,
+      "file_name": "mobile_app_shopping_cart_ux_design_mockup.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 75.0,
+      "watermark_score": 100.0,
+      "overall_score": 88.0,
+      "explanation": "The image is perfectly relevant to the search query, showcasing two key screens in a mobile e-commerce user flow: the product detail page and the shopping cart. The UX/UI design is clean, modern, and professional. The image clarity is decent, though some minor pixelation is visible upon close inspection of the text and icons. There are no watermarks.",
+      "file_name": "mobile_app_shopping_cart_ux_design_mockup.jpg",
+      "caption": "A UI/UX design mockup for a mobile e-commerce application, displayed on two side-by-side phone screens. The left screen shows a product detail page for a 'Swoosh T-Shirt', featuring a model, product name, price, size selection, and an 'Add to Bag' button. The right screen displays the 'Shopping Bag' (shopping cart), listing items added, with options to adjust quantity or delete items, a total price, and a prominent 'Checkout' button.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "A product detail page design for ecommerce portfolio",
+    "image_info": {
+      "url": "https://cdn.dribbble.com/userupload/16071472/file/still-4faca9105ac08d80dc529dc65cce5097.png?resize=400x0",
+      "img_format": "PNG",
+      "mode": "RGB",
+      "file_size": 62848,
+      "width": 400,
+      "height": 300,
+      "total_pixels": 120000,
+      "basic_score": 0.7116245533174461,
+      "file_name": "ecommerce_product_detail_page_design_mockup.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 70.0,
+      "watermark_score": 100.0,
+      "overall_score": 85.0,
+      "explanation": "The image is perfectly relevant to the query, showcasing a clean and modern product detail page design suitable for an e-commerce portfolio. The design is professional and well-composed. The only drawback is the image clarity; the resolution is somewhat low, causing text and finer details to appear slightly pixelated and blurry. There are no watermarks.",
+      "file_name": "ecommerce_product_detail_page_design_mockup.jpg",
+      "caption": "A mockup of a fashion e-commerce product detail page displayed on a tablet. The UI features a minimalist design for the 'Off-White' brand, showcasing a purple Nike ACG Polartec jacket. The layout includes a vertical image gallery on the left, with product information, color/size selection, and call-to-action buttons on the right.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "A product detail page design for ecommerce portfolio",
+    "image_info": {
+      "url": "https://cdn.dribbble.com/userupload/5982062/file/original-a273b69fed43e09950727a2a2cedf59a.png?resize=400x0",
+      "img_format": "PNG",
+      "mode": "RGBA",
+      "file_size": 74459,
+      "width": 400,
+      "height": 300,
+      "total_pixels": 120000,
+      "basic_score": 0.7140669967091051,
+      "file_name": "minimalist-ecommerce-product-page-design.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 75.0,
+      "watermark_score": 100.0,
+      "overall_score": 95.0,
+      "explanation": "The image is a perfect example of a product detail page design, making it highly relevant. The UI/UX design is exceptionally professional, clean, and modern, making it ideal for a portfolio. The image clarity is good but suffers from some minor compression and blurriness, which is the only small drawback. There are no watermarks.",
+      "file_name": "minimalist-ecommerce-product-page-design.jpg",
+      "caption": "A UI design mockup for a modern e-commerce product detail page. The layout is clean and minimalist, featuring a product image of a model in a 'Blazer Jacket', thumbnail gallery, price, size/color selectors, and an 'Add to Cart' button. The page also includes sections for user discussions, reviews, and related products, all within a sleek, monochrome color scheme.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "A product detail page design for ecommerce portfolio",
+    "image_info": {
+      "url": "https://ecommchecklist.com/wp-content/uploads/2023/03/0480df57659e58af545fed6a7976fb57.png",
+      "img_format": "PNG",
+      "mode": "RGBA",
+      "file_size": 426283,
+      "width": 1600,
+      "height": 1200,
+      "total_pixels": 1920000,
+      "basic_score": 0.7742682599328474,
+      "file_name": "ecommerce-product-detail-page-design-mockup.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 100.0,
+      "watermark_score": 100.0,
+      "overall_score": 100.0,
+      "explanation": "The image is an excellent and highly relevant example of a product detail page design, perfectly matching the search query. It showcases a clean, modern, and professional UI layout with exceptional clarity and no watermarks. Its high aesthetic and functional quality make it an ideal asset for an e-commerce design portfolio.",
+      "file_name": "ecommerce-product-detail-page-design-mockup.jpg",
+      "caption": "A clean and modern user interface design for an e-commerce product detail page. The page, titled 'College Essentials', features a product image of a pink bedding set, user ratings, and options to select quality, style, color, and size. It has a clear call-to-action with a price of $195 and an 'Add to Cart' button in a sticky footer.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "A product detail page design for ecommerce portfolio",
+    "image_info": {
+      "url": "https://flodesk.com/blog/wp-content/uploads/2022/11/image12-1.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 128656,
+      "width": 1150,
+      "height": 1140,
+      "total_pixels": 1311000,
+      "basic_score": 0.9055297644439495,
+      "file_name": "ecommerce-product-detail-page-design-example.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 85.0,
+      "watermark_score": 70.0,
+      "overall_score": 90.0,
+      "explanation": "The image is a perfect, real-world example of a product detail page design, making it extremely relevant to the search query. The screenshot is clear enough to analyze the layout and design elements. The J.Crew brand logo is present as part of the website's UI, so it's not a clean template, hence the reduced watermark score. Overall, this is an excellent reference for an e-commerce design portfolio.",
+      "file_name": "ecommerce-product-detail-page-design-example.jpg",
+      "caption": "A screenshot of a product detail page from the J.Crew e-commerce website, showcasing a clean and modern design. The page features a men's 'Boiled merino wool cardigan sweater' in yellow, with multiple product images on the left and purchasing details like price, size selection, and an 'Add to Bag' button on the right. Below, a 'How to Wear It' section provides styling suggestions.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "A product detail page design for ecommerce portfolio",
+    "image_info": {
+      "url": "https://business.adobe.com/uk/blog/basics/media_15b660aa093596863d02c3936c038196343606434.png?width=1200&format=pjpg&optimize=medium",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 38698,
+      "width": 1200,
+      "height": 600,
+      "total_pixels": 720000,
+      "basic_score": 0.8857814559592417,
+      "file_name": "ecommerce-product-page-and-analytics-dashboard.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 95.0,
+      "clarity_score": 85.0,
+      "watermark_score": 100.0,
+      "overall_score": 95.0,
+      "explanation": "The image is highly relevant as it explicitly features a clean, modern product detail page design alongside a related analytics dashboard, making it an excellent example for an e-commerce portfolio. The image clarity is good, with sharp text and graphics suitable for digital use. There are no watermarks. The overall composition is professional, well-balanced, and visually appealing.",
+      "file_name": "ecommerce-product-page-and-analytics-dashboard.jpg",
+      "caption": "A composite image showcasing modern e-commerce UI/UX design. On the right is a product detail page for a 'Pegasus Super Cushion' sneaker, displaying the price, color options, and an 'ADD TO BAG' button. On the left, an analytics dashboard on a laptop screen shows 'Multi-Channel Reporting' and 'Model Attribute Ranking' data. The elements are arranged on a clean white background with minimalist icons and subtle color gradients.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "A clean ecommerce website design mockup for portfolio showcase",
+    "image_info": {
+      "url": "https://cdn.shopify.com/s/files/1/0070/7032/articles/website_20mockup_1848x970_95e0ceb0-1766-434d-ad05-8f3f5302acb3.png?v=1729263594",
+      "img_format": "PNG",
+      "mode": "RGBA",
+      "file_size": 637216,
+      "width": 1848,
+      "height": 782,
+      "total_pixels": 1445136,
+      "basic_score": 0.8587637436096041,
+      "file_name": "ecommerce_website_design_mockup_on_devices.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 95.0,
+      "watermark_score": 100.0,
+      "overall_score": 98.0,
+      "explanation": "This image is a perfect match for the search query and prompt. It clearly showcases a clean, modern e-commerce website design on both a laptop and a smartphone, making it an ideal mockup for a portfolio. The image is high-resolution, features excellent composition and lighting, and is completely free of watermarks.",
+      "file_name": "ecommerce_website_design_mockup_on_devices.jpg",
+      "caption": "A professionally styled mockup featuring a laptop and smartphone displaying a responsive e-commerce website design for a perfume brand. The scene is set against a clean, neutral background with a minimalist pencil holder, creating a sophisticated and professional aesthetic perfect for a portfolio showcase.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "A clean ecommerce website design mockup for portfolio showcase",
+    "image_info": {
+      "url": "https://img.freepik.com/premium-psd/website-mockup-template-design_502601-564.jpg?semt=ais_hybrid&w=740&q=80",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 74790,
+      "width": 740,
+      "height": 493,
+      "total_pixels": 364820,
+      "basic_score": 0.8133782494826279,
+      "file_name": "ecommerce-website-portfolio-mockup.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 95.0,
+      "watermark_score": 80.0,
+      "overall_score": 90.0,
+      "explanation": "The image is perfectly relevant to the query, showcasing a clean and professional ecommerce website design in a mockup format suitable for a portfolio. The clarity is excellent, with sharp details. There is text in the top-left corner ('Website Mockup', 'Image Not Included') that acts as a label or minor watermark, slightly reducing the score in that category. The overall composition is dynamic and visually appealing, making it a high-quality example.",
+      "file_name": "ecommerce-website-portfolio-mockup.jpg",
+      "caption": "A dynamic mockup displaying a modern ecommerce website design across several overlapping browser windows. The design features a clean white background with vibrant orange accents, a hero banner for a 'Premium Sofa Set', and various product categories like electronics, apparel, and accessories.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "A clean ecommerce website design mockup for portfolio showcase",
+    "image_info": {
+      "url": "https://cdn.psdrepo.com/images/2x/e-commerce-website-free-psd-i4.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 156442,
+      "width": 800,
+      "height": 600,
+      "total_pixels": 480000,
+      "basic_score": 0.8581885232570942,
+      "file_name": "ecommerce-website-design-mockup-portfolio.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 95.0,
+      "clarity_score": 95.0,
+      "watermark_score": 100.0,
+      "overall_score": 90.0,
+      "explanation": "The image is highly relevant, perfectly showcasing a professionally designed e-commerce website on a laptop mockup, which is ideal for a portfolio. The image quality is excellent, with high clarity and resolution allowing text to be legible. There are no watermarks. The composition is bold and effective for a showcase, although the website design itself is somewhat busy rather than strictly 'clean'.",
+      "file_name": "ecommerce-website-design-mockup-portfolio.jpg",
+      "caption": "A professional mockup of an e-commerce website design for appliances and equipment, displayed on a laptop screen. The presentation includes a full view and a zoomed-in detail of the site's layout against a vibrant red background, making it a strong visual for a designer's portfolio showcase.",
+      "recommend": true,
+      "error": ""
+    }
+  }
+]

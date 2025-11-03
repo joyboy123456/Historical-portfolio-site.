@@ -1,0 +1,13 @@
+[build]
+  base = "portfolio-admin"
+  command = "pnpm install --prefer-offline && pnpm run build"
+  publish = "portfolio-admin/dist"
+
+[build.environment]
+  NODE_VERSION = "18"
+  NPM_FLAGS = "--prefer-offline"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
