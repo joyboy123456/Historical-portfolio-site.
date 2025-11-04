@@ -397,10 +397,121 @@ img {
     border-radius: 4px;
 }
 
+/* Work Experience Section */
+.experience {
+    padding: 120px 0;
+    background-color: #FEFEFE;
+}
+
+.experience-timeline {
+    max-width: 800px;
+    margin: 48px auto 0;
+}
+
+.experience-item {
+    padding: 32px 0;
+    border-bottom: 1px solid #E8E8E8;
+}
+
+.experience-item:last-child {
+    border-bottom: none;
+}
+
+.experience-header {
+    margin-bottom: 12px;
+}
+
+.experience-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1A1A1A;
+    margin-bottom: 8px;
+}
+
+.experience-company {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    color: #B8001F;
+    font-weight: 500;
+}
+
+.experience-period {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #6B6B6B;
+    margin: 8px 0;
+}
+
+.experience-description {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #4A4A4A;
+    margin-top: 16px;
+}
+
+/* Education Section */
+.education {
+    padding: 120px 0;
+    background-color: #F9F9F7;
+}
+
+.education-list {
+    max-width: 800px;
+    margin: 48px auto 0;
+}
+
+.education-item {
+    padding: 32px 0;
+    border-bottom: 1px solid #E8E8E8;
+}
+
+.education-item:last-child {
+    border-bottom: none;
+}
+
+.education-header {
+    margin-bottom: 12px;
+}
+
+.education-school {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1A1A1A;
+    margin-bottom: 8px;
+}
+
+.education-degree {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    color: #B8001F;
+    font-weight: 500;
+}
+
+.education-period {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #6B6B6B;
+    margin: 8px 0;
+}
+
+.education-gpa {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #6B6B6B;
+    margin: 4px 0;
+}
+
+.education-description {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #4A4A4A;
+    margin-top: 16px;
+}
+
 /* Contact Section */
 .contact {
-    padding: 96px 0;
-    background-color: #F9F9F7;
+    padding: 120px 0;
+    background-color: #FEFEFE;
     text-align: center;
 }
 

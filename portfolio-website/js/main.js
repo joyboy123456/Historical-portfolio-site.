@@ -7,6 +7,196 @@ const supabaseAnonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYm
 const { createClient } = supabase;
 const supabaseClient = createClient(supabaseUrl, supabaseAnonKey);
 
+// 加载并渲染简历板块到前端（顶层声明，供页面加载时调用）
+async function loadResumeSections() {
+    try {
+        const { data, error } = await supabaseClient
+            .from('resume_sections')
+            .select('*')
+            .order('display_order', { ascending: true })
+            .order('created_at', { ascending: true });
+
+        if (error) throw error;
+
+        const sections = data || [];
+        const byType = Object.fromEntries(
+            sections.map(s => [s.section_type, s])
+        );
+
+        // 1) Hero（头像/姓名/头衔）与 About 文案来自 profile
+        const profile = byType['profile'];
+        if (profile && profile.metadata) {
+            const meta = profile.metadata || {};
+
+            // Hero 头像（有内容才显示）
+            const avatarEl = document.querySelector('.hero .avatar-image');
+            const avatarContainer = document.querySelector('.hero .hero-avatar');
+            if (avatarEl && meta.avatar_url && meta.avatar_url.trim()) {
+                avatarEl.src = meta.avatar_url;
+                avatarEl.alt = (meta.name || '头像') + '头像';
+                if (avatarContainer) avatarContainer.style.display = 'block';
+            } else if (avatarContainer) {
+                avatarContainer.style.display = 'none';
+            }
+
+            // Hero 姓名（有内容才显示）
+            const heroTitle = document.querySelector('.hero-title');
+            if (heroTitle) {
+                if (meta.name && meta.name.trim()) {
+                    heroTitle.textContent = meta.name;
+                    heroTitle.style.display = 'block';
+                } else {
+                    heroTitle.style.display = 'none';
+                }
+            }
+
+            // Hero 职位/头衔（有内容才显示）
+            const heroSubtitle = document.querySelector('.hero-subtitle');
+            if (heroSubtitle) {
+                if (meta.title && meta.title.trim()) {
+                    heroSubtitle.textContent = meta.title;
+                    heroSubtitle.style.display = 'block';
+                } else {
+                    heroSubtitle.style.display = 'none';
+                }
+            }
+
+            // About 文案（有内容才显示）
+            const aboutText = document.querySelector('.about .about-text');
+            if (aboutText) {
+                if (meta.bio && meta.bio.trim()) {
+                    aboutText.innerHTML = `<p class="about-paragraph">${escapeHtml(meta.bio)}</p>`;
+                    aboutText.style.display = 'block';
+                } else {
+                    aboutText.style.display = 'none';
+                }
+            }
+
+            // Contact 邮箱（有内容才显示）
+            const emailLink = document.querySelector('.contact .contact-email');
+            if (emailLink) {
+                if (meta.email && meta.email.trim()) {
+                    emailLink.textContent = meta.email;
+                    emailLink.href = `mailto:${meta.email}`;
+                    emailLink.style.display = 'inline';
+                } else {
+                    emailLink.style.display = 'none';
+                }
+            }
+        }
+
+        // 2) Skills（专业技能）- 有内容才显示整个板块
+        const skills = byType['skills'];
+        const skillsSection = document.querySelector('.about .about-skills');
+        if (skills && skills.metadata && Array.isArray(skills.metadata.skills) && skills.metadata.skills.length > 0) {
+            const skillsGrid = document.querySelector('.about .skills-grid');
+            if (skillsGrid) {
+                // 只显示有名称的技能
+                const validSkills = skills.metadata.skills.filter(item => item.name && item.name.trim());
+                if (validSkills.length > 0) {
+                    skillsGrid.innerHTML = validSkills
+                        .map(item => `
+                            <div class="skill-item">
+                              <span class="skill-name">${escapeHtml(item.name)}</span>
+                              ${item.description && item.description.trim() ? `<span class="skill-level">${escapeHtml(item.description)}</span>` : ''}
+                            </div>
+                        `)
+                        .join('');
+                    if (skillsSection) skillsSection.style.display = 'block';
+                } else {
+                    if (skillsSection) skillsSection.style.display = 'none';
+                }
+            }
+        } else {
+            if (skillsSection) skillsSection.style.display = 'none';
+        }
+
+        // 3) Work Experience（工作经历）- 有内容才显示整个板块
+        const workExp = byType['work_experience'];
+        const expSection = document.getElementById('experience');
+        if (workExp && workExp.metadata && Array.isArray(workExp.metadata.experiences) && workExp.metadata.experiences.length > 0) {
+            const expContent = document.getElementById('experience-content');
+            if (expContent) {
+                // 只显示有职位或公司的经历
+                const validExps = workExp.metadata.experiences.filter(exp => 
+                    (exp.position && exp.position.trim()) || (exp.company && exp.company.trim())
+                );
+                
+                if (validExps.length > 0) {
+                    expContent.innerHTML = validExps
+                        .map(exp => {
+                            const startDate = exp.start_date || '';
+                            const endDate = exp.current ? '至今' : (exp.end_date || '');
+                            const period = startDate && endDate ? `${startDate} - ${endDate}` : '';
+                            
+                            return `
+                                <div class="experience-item">
+                                    <div class="experience-header">
+                                        ${exp.position && exp.position.trim() ? `<h3 class="experience-title">${escapeHtml(exp.position)}</h3>` : ''}
+                                        ${exp.company && exp.company.trim() ? `<span class="experience-company">${escapeHtml(exp.company)}</span>` : ''}
+                                    </div>
+                                    ${period ? `<p class="experience-period">${escapeHtml(period)}</p>` : ''}
+                                    ${exp.description && exp.description.trim() ? `<p class="experience-description">${escapeHtml(exp.description)}</p>` : ''}
+                                </div>
+                            `;
+                        })
+                        .join('');
+                    if (expSection) expSection.style.display = 'block';
+                } else {
+                    if (expSection) expSection.style.display = 'none';
+                }
+            }
+        } else {
+            if (expSection) expSection.style.display = 'none';
+        }
+
+        // 4) Education（教育背景）- 有内容才显示整个板块
+        const education = byType['education'];
+        const eduSection = document.getElementById('education');
+        if (education && education.metadata && Array.isArray(education.metadata.education) && education.metadata.education.length > 0) {
+            const eduContent = document.getElementById('education-content');
+            if (eduContent) {
+                // 只显示有学校名的教育经历
+                const validEdu = education.metadata.education.filter(edu => 
+                    edu.school && edu.school.trim()
+                );
+                
+                if (validEdu.length > 0) {
+                    eduContent.innerHTML = validEdu
+                        .map(edu => {
+                            const startDate = edu.start_date || '';
+                            const endDate = edu.current ? '至今' : (edu.end_date || '');
+                            const period = startDate && endDate ? `${startDate} - ${endDate}` : '';
+                            
+                            // 构建学位信息（只显示有内容的部分）
+                            const degreeInfo = [edu.degree, edu.major].filter(x => x && x.trim()).join(' · ');
+                            
+                            return `
+                                <div class="education-item">
+                                    <div class="education-header">
+                                        <h3 class="education-school">${escapeHtml(edu.school)}</h3>
+                                        ${degreeInfo ? `<span class="education-degree">${escapeHtml(degreeInfo)}</span>` : ''}
+                                    </div>
+                                    ${period ? `<p class="education-period">${escapeHtml(period)}</p>` : ''}
+                                    ${edu.gpa && edu.gpa.trim() ? `<p class="education-gpa">GPA: ${escapeHtml(edu.gpa)}</p>` : ''}
+                                    ${edu.description && edu.description.trim() ? `<p class="education-description">${escapeHtml(edu.description)}</p>` : ''}
+                                </div>
+                            `;
+                        })
+                        .join('');
+                    if (eduSection) eduSection.style.display = 'block';
+                } else {
+                    if (eduSection) eduSection.style.display = 'none';
+                }
+            }
+        } else {
+            if (eduSection) eduSection.style.display = 'none';
+        }
+    } catch (err) {
+        console.error('加载简历信息失败:', err);
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     // Navigation Elements
     const navToggle = document.getElementById('nav-toggle');
@@ -122,6 +312,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initial call to set active state
     updateActiveNavLink();
     updateNavigationBackground();
+
+    // 加载简历板块（Hero/About/Skills/Contact）
+    loadResumeSections();
 
     // 加载作品
     loadPortfolioProjects();
@@ -446,6 +639,16 @@ async function loadPortfolioProjects() {
 }
 
 // Utility Functions
+function escapeHtml(str) {
+    if (typeof str !== 'string') return '';
+    return str.replace(/[&<>"']/g, (m) => ({
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#39;'
+    })[m]);
+}
 function debounce(func, wait) {
     let timeout;
     return function executedFunction(...args) {
