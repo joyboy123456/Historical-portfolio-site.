@@ -37,7 +37,7 @@ const sectionTypes = [
 export function ResumeForm({ open, onOpenChange, section, onSuccess }: ResumeFormProps) {
   const [loading, setLoading] = useState(false)
   const [selectedType, setSelectedType] = useState<SectionType>('profile')
-  const formRef = useRef<HTMLFormElement>(null)
+  const formRef = useRef<HTMLDivElement>(null)
 
   // 当 dialog 打开/关闭或 section 变化时，重置状态
   useEffect(() => {
