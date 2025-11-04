@@ -27,13 +27,31 @@ async function loadResumeSections() {
         const profile = byType['profile'];
         if (profile && profile.metadata) {
             const meta = profile.metadata || {};
+            const userName = meta.name && meta.name.trim() ? meta.name : '';
+
+            // 更新页面标题
+            if (userName) {
+                document.title = `${userName} - ${meta.title || '个人作品集'}`;
+            }
+
+            // 更新导航栏 logo
+            const navLogoText = document.getElementById('nav-logo-text');
+            if (navLogoText && userName) {
+                navLogoText.textContent = userName;
+            }
+
+            // 更新 Footer 版权信息
+            const footerCopyright = document.getElementById('footer-copyright-text');
+            if (footerCopyright && userName) {
+                footerCopyright.textContent = `© 2025 ${userName}. 保留所有权利.`;
+            }
 
             // Hero 头像（有内容才显示）
             const avatarEl = document.querySelector('.hero .avatar-image');
             const avatarContainer = document.querySelector('.hero .hero-avatar');
             if (avatarEl && meta.avatar_url && meta.avatar_url.trim()) {
                 avatarEl.src = meta.avatar_url;
-                avatarEl.alt = (meta.name || '头像') + '头像';
+                avatarEl.alt = (userName || '头像') + '头像';
                 if (avatarContainer) avatarContainer.style.display = 'block';
             } else if (avatarContainer) {
                 avatarContainer.style.display = 'none';
@@ -42,8 +60,8 @@ async function loadResumeSections() {
             // Hero 姓名（有内容才显示）
             const heroTitle = document.querySelector('.hero-title');
             if (heroTitle) {
-                if (meta.name && meta.name.trim()) {
-                    heroTitle.textContent = meta.name;
+                if (userName) {
+                    heroTitle.textContent = userName;
                     heroTitle.style.display = 'block';
                 } else {
                     heroTitle.style.display = 'none';
@@ -74,14 +92,20 @@ async function loadResumeSections() {
 
             // Contact 邮箱（有内容才显示）
             const emailLink = document.querySelector('.contact .contact-email');
-            if (emailLink) {
-                if (meta.email && meta.email.trim()) {
-                    emailLink.textContent = meta.email;
-                    emailLink.href = `mailto:${meta.email}`;
-                    emailLink.style.display = 'inline';
-                } else {
-                    emailLink.style.display = 'none';
+            const emailCta = document.querySelector('.contact .contact-cta a');
+            if (emailLink && meta.email && meta.email.trim()) {
+                emailLink.textContent = meta.email;
+                emailLink.href = `mailto:${meta.email}`;
+                emailLink.style.display = 'inline';
+
+                // 更新发送邮件按钮
+                if (emailCta) {
+                    emailCta.href = `mailto:${meta.email}?subject=合作咨询`;
+                    emailCta.parentElement.style.display = 'block';
                 }
+            } else {
+                if (emailLink) emailLink.style.display = 'none';
+                if (emailCta) emailCta.parentElement.style.display = 'none';
             }
         }
 
@@ -541,7 +565,7 @@ document.addEventListener('DOMContentLoaded', function() {
     scrollToTopButton.addEventListener('click', scrollToTop);
 
     // Console welcome message
-    console.log('%c欢迎访问李明的作品集！', 'color: #B8001F; font-size: 16px; font-weight: bold;');
+    console.log('%c欢迎访问个人作品集！', 'color: #B8001F; font-size: 16px; font-weight: bold;');
     console.log('%c如果您对网站的技术实现感兴趣，欢迎交流讨论。', 'color: #4A4A4A; font-size: 14px;');
 });
 

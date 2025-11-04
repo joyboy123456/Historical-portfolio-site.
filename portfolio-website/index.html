@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>李明 - 电商体验设计师</title>
-    <meta name="description" content="专业的电商体验设计师，专注于用户界面设计和用户体验优化">
+    <title>个人作品集</title>
+    <meta name="description" content="个人作品集与简历展示">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,7 +19,7 @@
     <nav class="navigation" id="navigation">
         <div class="nav-container">
             <div class="nav-logo">
-                <a href="#hero" class="logo-link">李明</a>
+                <a href="#hero" class="logo-link" id="nav-logo-text">作品集</a>
             </div>
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="#portfolio" class="nav-link">作品</a></li>
@@ -37,11 +37,11 @@
     <!-- Hero Section -->
     <section class="hero" id="hero">
         <div class="hero-container">
-            <div class="hero-avatar">
-                <img src="images/designer_avatar_5.jpg" alt="李明头像" class="avatar-image">
+            <div class="hero-avatar" style="display: none;">
+                <img src="" alt="头像" class="avatar-image">
             </div>
-            <h1 class="hero-title">李明</h1>
-            <p class="hero-subtitle">电商体验设计师 / 用户界面专家</p>
+            <h1 class="hero-title" style="display: none;"></h1>
+            <p class="hero-subtitle" style="display: none;"></p>
             <div class="hero-cta">
                 <a href="#portfolio" class="btn btn-primary">查看作品</a>
             </div>
@@ -66,56 +66,13 @@
         <div class="container">
             <h2 class="section-title">关于我</h2>
             <div class="about-content">
-                <div class="about-text">
-                    <p class="about-paragraph">
-                        我是一名专注于电商领域的用户体验设计师，拥有5年的设计经验。在这期间，我为众多知名品牌和初创公司设计了用户界面和用户体验，帮助他们提升业务转化率和用户满意度。
-                    </p>
-                    <p class="about-paragraph">
-                        我的设计理念是以用户为中心，通过深入的用户研究和数据分析，创造既美观又实用的设计解决方案。我相信好的设计不仅要看起来漂亮，更要能够解决实际问题，为用户和业务创造价值。
-                    </p>
-                    <p class="about-paragraph">
-                        我擅长移动端电商应用设计、响应式网站设计、购物车体验优化以及设计系统搭建。在设计过程中，我注重与产品经理、开发工程师的紧密协作，确保设计方案能够顺利落地实施。
-                    </p>
+                <div class="about-text" style="display: none;">
+                    <!-- 关于我的内容将通过 JavaScript 动态加载 -->
                 </div>
-                <div class="about-skills">
+                <div class="about-skills" style="display: none;">
                     <h3 class="skills-title">核心技能</h3>
                     <div class="skills-grid">
-                        <div class="skill-item">
-                            <span class="skill-name">用户界面设计</span>
-                            <span class="skill-level">精通</span>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">用户体验设计</span>
-                            <span class="skill-level">精通</span>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">电商设计</span>
-                            <span class="skill-level">专家</span>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">设计系统</span>
-                            <span class="skill-level">熟练</span>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">用户研究</span>
-                            <span class="skill-level">熟练</span>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">原型设计</span>
-                            <span class="skill-level">精通</span>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Figma</span>
-                            <span class="skill-level">专家</span>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Sketch</span>
-                            <span class="skill-level">熟练</span>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Adobe Creative Suite</span>
-                            <span class="skill-level">熟练</span>
-                        </div>
+                        <!-- 技能列表将通过 JavaScript 动态加载 -->
                     </div>
                 </div>
             </div>
@@ -147,14 +104,14 @@
         <div class="container">
             <h2 class="section-title">联系方式</h2>
             <div class="contact-content">
-                <p class="contact-description">
-                    我期待与您合作，共同创造优秀的设计体验。无论是产品设计咨询、用户体验优化，还是设计团队培训，我都很乐意为您提供专业的设计服务。
+                <p class="contact-description" style="display: none;">
+                    <!-- 联系方式描述将通过 JavaScript 动态加载 -->
                 </p>
                 <div class="contact-info">
-                    <a href="mailto:hello@liming-design.com" class="contact-email">hello@liming-design.com</a>
+                    <a href="mailto:" class="contact-email" style="display: none;"></a>
                 </div>
-                <div class="contact-cta">
-                    <a href="mailto:hello@liming-design.com?subject=设计合作咨询" class="btn btn-primary">发送邮件</a>
+                <div class="contact-cta" style="display: none;">
+                    <a href="mailto:" class="btn btn-primary">发送邮件</a>
                 </div>
             </div>
         </div>
@@ -199,7 +156,7 @@
                     </a>
                 </div>
                 <div class="footer-copyright">
-                    <p>&copy; 2025 李明. 保留所有权利.</p>
+                    <p id="footer-copyright-text">&copy; 2025 个人作品集. 保留所有权利.</p>
                 </div>
             </div>
         </div>
