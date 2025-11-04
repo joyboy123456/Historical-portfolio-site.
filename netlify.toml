@@ -1,7 +1,7 @@
 [build]
   base = "portfolio-admin"
   command = "pnpm install --prefer-offline && pnpm run build"
-  publish = "portfolio-admin/dist"
+  publish = "dist"
 
 [build.environment]
   NODE_VERSION = "18"
