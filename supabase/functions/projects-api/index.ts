@@ -146,6 +146,43 @@ Deno.serve(async (req) => {
 
         // DELETE - 删除作品
         if (req.method === 'DELETE') {
+            // 批量删除
+            if (projectId === 'batch-delete') {
+                const body = await req.json();
+                const { ids } = body;
+
+                if (!ids || !Array.isArray(ids) || ids.length === 0) {
+                    throw new Error('Valid project IDs array is required for batch delete');
+                }
+
+                // 使用 in 操作符批量删除
+                const idsQuery = ids.map(id => `"${id}"`).join(',');
+                const response = await fetch(`${supabaseUrl}/rest/v1/projects?id=in.(${idsQuery})`, {
+                    method: 'DELETE',
+                    headers: {
+                        'Authorization': `Bearer ${serviceRoleKey}`,
+                        'apikey': serviceRoleKey,
+                        'Content-Type': 'application/json'
+                    }
+                });
+
+                if (!response.ok) {
+                    const errorText = await response.text();
+                    throw new Error(`Failed to batch delete projects: ${errorText}`);
+                }
+
+                return new Response(JSON.stringify({
+                    data: {
+                        success: true,
+                        message: `Successfully deleted ${ids.length} project(s)`,
+                        count: ids.length
+                    }
+                }), {
+                    headers: { ...corsHeaders, 'Content-Type': 'application/json' }
+                });
+            }
+
+            // 单个删除
             if (!projectId || projectId === 'projects-api') {
                 throw new Error('Project ID is required for delete');
             }
@@ -164,7 +201,7 @@ Deno.serve(async (req) => {
                 throw new Error(`Failed to delete project: ${errorText}`);
             }
 
-            return new Response(JSON.stringify({ 
+            return new Response(JSON.stringify({
                 data: { success: true, message: 'Project deleted successfully' }
             }), {
                 headers: { ...corsHeaders, 'Content-Type': 'application/json' }

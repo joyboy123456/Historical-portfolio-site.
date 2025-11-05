@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Plus, Pencil, Trash2, Star, Briefcase } from 'lucide-react'
+import { Plus, Pencil, Trash2, Star, Briefcase, CheckSquare, Square } from 'lucide-react'
 import { callEdgeFunction, type Project } from '../lib/supabase'
 import { Button } from '../components/ui/button'
 import { Card } from '../components/ui/card'
@@ -10,6 +10,7 @@ export function ProjectsPage() {
   const [loading, setLoading] = useState(true)
   const [formOpen, setFormOpen] = useState(false)
   const [editingProject, setEditingProject] = useState<Project | undefined>()
+  const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set())
 
   useEffect(() => {
     loadProjects()
@@ -52,6 +53,47 @@ export function ProjectsPage() {
     }
   }
 
+  async function batchDeleteProjects() {
+    if (selectedIds.size === 0) {
+      return
+    }
+
+    if (!confirm(`确定要删除选中的 ${selectedIds.size} 个作品吗？此操作不可恢复！`)) {
+      return
+    }
+
+    try {
+      await callEdgeFunction('projects-api/batch-delete', {
+        method: 'DELETE',
+        body: { ids: Array.from(selectedIds) }
+      })
+
+      setSelectedIds(new Set())
+      await loadProjects()
+    } catch (error) {
+      console.error('批量删除作品失败:', error)
+      alert('批量删除作品失败')
+    }
+  }
+
+  function toggleSelectProject(id: string) {
+    const newSelectedIds = new Set(selectedIds)
+    if (newSelectedIds.has(id)) {
+      newSelectedIds.delete(id)
+    } else {
+      newSelectedIds.add(id)
+    }
+    setSelectedIds(newSelectedIds)
+  }
+
+  function toggleSelectAll() {
+    if (selectedIds.size === projects.length) {
+      setSelectedIds(new Set())
+    } else {
+      setSelectedIds(new Set(projects.map(p => p.id)))
+    }
+  }
+
   function handleAddProject() {
     setEditingProject(undefined)
     setFormOpen(true)
@@ -88,6 +130,46 @@ export function ProjectsPage() {
         </Button>
       </div>
 
+      {/* Batch Actions Bar */}
+      {selectedIds.size > 0 && (
+        <Card className="p-4 mb-6 bg-blue-50 border-blue-200">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-4">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={toggleSelectAll}
+                className="gap-2"
+              >
+                {selectedIds.size === projects.length ? (
+                  <>
+                    <CheckSquare size={16} />
+                    取消全选
+                  </>
+                ) : (
+                  <>
+                    <Square size={16} />
+                    全选
+                  </>
+                )}
+              </Button>
+              <span className="text-sm text-stone-700">
+                已选中 <strong>{selectedIds.size}</strong> 个作品
+              </span>
+            </div>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={batchDeleteProjects}
+              className="gap-2 text-red-600 hover:text-red-700 hover:bg-red-50 border-red-200"
+            >
+              <Trash2 size={16} />
+              批量删除
+            </Button>
+          </div>
+        </Card>
+      )}
+
       {/* Projects Grid */}
       {projects.length === 0 ? (
         <Card className="p-12 text-center">
@@ -104,7 +186,29 @@ export function ProjectsPage() {
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project) => (
-            <Card key={project.id} className="overflow-hidden group">
+            <Card key={project.id} className="overflow-hidden group relative">
+              {/* Checkbox */}
+              <div className="absolute top-3 left-3 z-10">
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation()
+                    toggleSelectProject(project.id)
+                  }}
+                  className={`
+                    w-6 h-6 rounded border-2 flex items-center justify-center
+                    transition-all duration-200
+                    ${selectedIds.has(project.id)
+                      ? 'bg-blue-600 border-blue-600'
+                      : 'bg-white/90 border-stone-300 hover:border-blue-400'
+                    }
+                  `}
+                >
+                  {selectedIds.has(project.id) && (
+                    <CheckSquare size={16} className="text-white" />
+                  )}
+                </button>
+              </div>
+
               {/* Image */}
               <div className="aspect-[4/3] overflow-hidden bg-stone-100">
                 <img

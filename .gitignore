@@ -46,3 +46,7 @@ coverage/
 .memory/
 .browser_screenshots/
 .claude/
+.vercel
+
+# Local Netlify folder
+.netlify
